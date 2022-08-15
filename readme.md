@@ -19,3 +19,12 @@ typeof t2 // (string|number)[]
 type t = [string, number]
 元组长度是一个不可变常量
 ```
+
+### 内置类型
+```ts 
+omit  从A中排除B类型包含的属性
+pick  同上述相反
+
+infer 类型推断
+type c<T> = T extends [...infer A, infer B] 通过这种方式推导出最后一个元素
+```
