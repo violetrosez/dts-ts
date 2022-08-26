@@ -27,4 +27,6 @@ pick  同上述相反
 
 infer 类型推断
 type c<T> = T extends [...infer A, infer B] 通过这种方式推导出最后一个元素
+
+00296   
 ```
