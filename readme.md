@@ -30,3 +30,4 @@ type c<T> = T extends [...infer A, infer B] 通过这种方式推导出最后一
 
 00296   
 ```
+- PropertyKey 等同于 string | number | symbol
