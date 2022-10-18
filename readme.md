@@ -34,3 +34,8 @@ type c<T> = T extends [...infer A, infer B] 通过这种方式推导出最后一
 
 - [01367]删除类型中的索引  只有 [x: string]情况下 string extends string 才成立, 否则 string extends 字面量 不成立
 - [01978]infer 用于字符串一般用来取第一个值，最后一个值// `${infer L}%`
+
+
+- [03196]函数的类型推断
+  需要【形参:类型】的写法
+  - type FlipArguments<T extends Function> = T extends (...args: infer Args)=>infer R ? (...args:Reverse<Args>)=>R : never
