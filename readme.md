@@ -39,3 +39,5 @@ type c<T> = T extends [...infer A, infer B] 通过这种方式推导出最后一
 - [03196]函数的类型推断
   需要【形参:类型】的写法
   - type FlipArguments<T extends Function> = T extends (...args: infer Args)=>infer R ? (...args:Reverse<Args>)=>R : never
+
+当条件类型作用于泛型类型时，当给定联合类型时，条件类型就成为分布的
